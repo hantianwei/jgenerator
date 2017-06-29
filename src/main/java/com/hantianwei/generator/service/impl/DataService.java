@@ -1,8 +1,5 @@
 package com.hantianwei.generator.service.impl;
 
-
-import com.hantianwei.generator.dao.DataDao;
-import com.hantianwei.generator.model.Config;
 import com.hantianwei.generator.model.Field;
 import com.hantianwei.generator.model.Table;
 import com.hantianwei.generator.service.IDataService;
@@ -17,7 +14,6 @@ import java.util.Map;
  * Created by tianwei on 2017/6/26.
  */
 public class DataService implements IDataService {
-    DataDao dataDao = new DataDao();
 
     /**
      * 根据表名获取模板要用的Map型数据
