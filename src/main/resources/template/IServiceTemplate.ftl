@@ -16,7 +16,6 @@ package ${config.PACKAGE_ROOT_NAME}.${config.PACKAGE_ISERVICE_NAME};
 */
 
 import ${config.PACKAGE_ROOT_NAME}.${config.PACKAGE_MODEL_NAME}.${tableProName?cap_first};
-import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

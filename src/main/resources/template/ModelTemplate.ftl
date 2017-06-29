@@ -1,6 +1,8 @@
 package ${config.PACKAGE_ROOT_NAME}.${config.PACKAGE_MODEL_NAME};
 
-import java.sql.Timestamp;
+import java.math.BigDecimal;
+import java.sql.Time;
+import java.util.Date;
 
 /**
 * -------------------------------------------------------------------------------
@@ -23,8 +25,8 @@ public class ${ tableProName?cap_first }  {
 	private  ${pro.type} ${pro.proName}; //${pro.description}
 	</#list>
 
-	//属性get||set方法
 	<#list fieldList as pro>
+	//${pro.description}
 	public ${pro.type} get${pro.proName?cap_first}() {
 		return this.${pro.proName};
 	}
@@ -35,6 +37,7 @@ public class ${ tableProName?cap_first }  {
 		this.${pro.proName} = ${pro.proName};
 	</#if>
 	}
+
 	</#list>
 
 }

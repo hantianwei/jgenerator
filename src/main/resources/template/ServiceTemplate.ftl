@@ -1,4 +1,4 @@
-package ${config.PACKAGE_ROOT_NAME}.${config.PACKAGE_SERVICE_NAME};
+package ${config.PACKAGE_ROOT_NAME}.${config.PACKAGE_SERVICE_NAME}.impl;
 
 /**
 * -------------------------------------------------------------------------------
