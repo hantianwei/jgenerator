@@ -3,9 +3,11 @@ package com.hantianwei.generator.util;
 import java.io.*;
 import java.util.Map;
 
+import freemarker.ext.beans.BeansWrapper;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
+import freemarker.template.TemplateHashModel;
 
 /**
  * Created by tianwei on 2017/6/29.
@@ -21,7 +23,7 @@ public class FreeMakerUtil {
         try {
             Configuration cfg = new Configuration();
             cfg.setDefaultEncoding("UTF-8");
-            cfg.setClassForTemplateLoading(this.getClass(), "/ftl");
+            cfg.setClassForTemplateLoading(this.getClass(), "/template");
             Template template = cfg.getTemplate(name);
             return template;
         } catch (IOException e) {
@@ -59,6 +61,23 @@ public class FreeMakerUtil {
                 e.printStackTrace();
             }
         }
+    }
+
+    // 指定要在ftl页面使用的静态包名
+    public static TemplateHashModel useStaticPackage(String packageName)
+    {
+        try
+        {
+            BeansWrapper wrapper = BeansWrapper.getDefaultInstance();
+            TemplateHashModel staticModels = wrapper.getStaticModels();
+            TemplateHashModel fileStatics = (TemplateHashModel) staticModels.get(packageName);
+            return fileStatics;
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
 

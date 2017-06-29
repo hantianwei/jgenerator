@@ -6,6 +6,7 @@ import com.hantianwei.generator.model.Config;
 import com.hantianwei.generator.model.Field;
 import com.hantianwei.generator.model.Table;
 import com.hantianwei.generator.service.IDataService;
+import com.hantianwei.generator.util.FreeMakerUtil;
 import com.hantianwei.generator.util.StringUtil;
 
 import java.util.HashMap;
@@ -25,19 +26,13 @@ public class DataService implements IDataService {
      * @param table
      * @return
      */
-    public Map<String, Object> getDbTemplateData(Table table, String packageName, List<Field> fieldList) {
+    public Map<String, Object> getDbTemplateData(Table table, List<Field> fieldList) {
         Map<String, Object> templateData = new HashMap<String, Object>();
         templateData.put("tableName", table.getName());
         templateData.put("tableProName", table.getProName());
-        templateData.put("properties", fieldList);
-        templateData.put("package", packageName);
-        templateData.put("packageModel", Config.PACKAGE_ROOT_NAME + "." + Config.PACKAGE_MODEL_NAME);
-        templateData.put("packageDao", Config.PACKAGE_ROOT_NAME + "." + Config.PACKAGE_DAO_NAME);
-        templateData.put("packageService", Config.PACKAGE_ROOT_NAME + "." + Config.PACKAGE_SERVICE_NAME);
-        templateData.put("packageIService", Config.PACKAGE_ROOT_NAME + "." + Config.PACKAGE_ISERVICE_NAME);
-        templateData.put("packageIService", Config.PACKAGE_ROOT_NAME + "." + Config.PACKAGE_ISERVICE_NAME);
-        templateData.put("tablePk", StringUtil.getFieldPk(fieldList));
-        templateData.put("configTrimString", Config.TRIM_STRINGS);
+        templateData.put("fieldList", fieldList);
+        templateData.put("fieldPk", StringUtil.getFieldPk(fieldList));
+        templateData.put("config", FreeMakerUtil.useStaticPackage("com.hantianwei.generator.model.Config"));
         return templateData;
     }
 

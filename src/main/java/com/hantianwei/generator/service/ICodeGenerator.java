@@ -10,9 +10,9 @@ import java.util.List;
  */
 public interface ICodeGenerator {
 
-    void generateFile(String templateName, Table table, List<Field> fieldList, String packageName, String packagePath, String fileName);
+    void generateFile(String templateName, Table table, List<Field> fieldList, String packagePath, String fileName);
 
-    void generateFileWithDb(String templateName, Table table, List<Field> fieldList, String packageName, String packagePath, String fileName);
+    void generateFileWithDb(String templateName, Table table, List<Field> fieldList, String packagePath, String fileName);
 
     void generatorAllTables();
 }

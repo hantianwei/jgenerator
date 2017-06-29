@@ -16,5 +16,5 @@ public interface IDataService {
      * @param table
      * @return
      */
-    Map<String, Object> getDbTemplateData(Table table, String packageName, List<Field> fieldList);
+    Map<String, Object> getDbTemplateData(Table table, List<Field> fieldList);
 }
