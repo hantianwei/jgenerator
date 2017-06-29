@@ -10,8 +10,8 @@
   DB_USER = root
   DB_PASSWORD = abc@123
   DB_NAME = testdrive
-  PACKAGE_ROOT_NAME=cn.com.autohome.testdb
-  PACKAGE_ROOT_PATH = cn.com.autohome.testdb
+  PACKAGE_ROOT_NAME= com.hantianwei.testdb
+  PACKAGE_ROOT_PATH = com.hantianwei.testdb
   PACKAGE_MODEL_NAME = model
   PACKAGE_MODEL_PATH = \\testcode\\testcode-domain\\src/main/java/com/hantianwei/testcode/domain/
   PACKAGE_DAO_NAME = dao
@@ -29,6 +29,6 @@
   ``` java
   java -jar jgenerator.jar config.properties
   ```
-  
+
   * 可以多配置，在执行时指定用哪个配置即可
   * 如果程序有BUG或好的建议请提给我，谢谢!
