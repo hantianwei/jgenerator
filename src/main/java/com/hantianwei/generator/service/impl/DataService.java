@@ -26,6 +26,7 @@ public class DataService implements IDataService {
         Map<String, Object> templateData = new HashMap<String, Object>();
         templateData.put("tableName", table.getName());
         templateData.put("tableProName", table.getProName());
+        templateData.put("tableDescription", table.getDescription());
         templateData.put("fieldList", fieldList);
         templateData.put("fieldPk", StringUtil.getFieldPk(fieldList));
         templateData.put("config", FreeMakerUtil.useStaticPackage("com.hantianwei.generator.model.Config"));

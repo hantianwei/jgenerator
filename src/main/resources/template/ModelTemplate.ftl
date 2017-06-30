@@ -10,7 +10,7 @@ import java.util.Date;
 *
 * 创建人：　	代码生成
 * 创建日期：	${.now}
-* 创建说明： 	${ tableProName?cap_first }实体
+* 创建说明： 	${ tableProName?cap_first }(${tableDescription})实体
 *
 * 修改人：　
 * 修改日期：
