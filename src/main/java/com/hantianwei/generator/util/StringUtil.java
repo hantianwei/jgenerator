@@ -13,10 +13,9 @@ import java.util.Map;
 public class StringUtil {
     /**
      * 把数据库中的字段转换为变量类型
-     * 如（user_id ----> userId）
      *
-     * @param field
-     * @return
+     * @param field:字段
+     * @return 返回值
      */
     public static String convertField(String field) {
         //分隔符
@@ -41,8 +40,8 @@ public class StringUtil {
     /**
      * 获取字符串型的类型名
      *
-     * @param type
-     * @return
+     * @param type:类型
+     * @return 返回值
      */
     public static String convertToJavaType(String type) {
         Map<String,String> map = getTypesJava();

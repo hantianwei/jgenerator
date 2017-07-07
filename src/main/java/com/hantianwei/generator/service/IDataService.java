@@ -13,8 +13,9 @@ public interface IDataService {
     /**
      * 根据表名获取Vo模板要用的Map型数据
      *
-     * @param table
-     * @return
+     * @param table:表
+     * @param  fieldList:列
+     * @return 返回值
      */
     Map<String, Object> getDbTemplateData(Table table, List<Field> fieldList);
 }

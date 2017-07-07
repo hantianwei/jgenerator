@@ -48,9 +48,9 @@ public class DataDao {
     /**
      * 根据表名获取所有的列信息
      *
-     * @param tableSchema
-     * @param tableName
-     * @return List<Field>
+     * @param tableSchema:数据库名
+     * @param tableName:表名
+     * @return Field:返回值
      */
     public List<Field> getAllColums(String tableSchema, String tableName) {
 
@@ -92,8 +92,8 @@ public class DataDao {
     /**
      * 根据库名聂所有表
      *
-     * @param tableSchema
-     * @return List<Table>
+     * @param tableSchema:数据库名
+     * @return Table:表实体
      */
     public List<Table> getAllTables(String tableSchema) {
         List<Table> fieldList = new ArrayList<Table>();

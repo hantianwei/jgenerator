@@ -19,8 +19,8 @@ public class DataService implements IDataService {
      * 根据表名获取模板要用的Map型数据
      * (带有列信息)
      *
-     * @param table
-     * @return
+     * @param table:表
+     * @return 返回值
      */
     public Map<String, Object> getDbTemplateData(Table table, List<Field> fieldList) {
         Map<String, Object> templateData = new HashMap<String, Object>();

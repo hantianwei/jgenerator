@@ -1,13 +1,13 @@
 package com.hantianwei.generator.util;
 
-import java.io.*;
-import java.util.Map;
-
 import freemarker.ext.beans.BeansWrapper;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import freemarker.template.TemplateHashModel;
+
+import java.io.*;
+import java.util.Map;
 
 /**
  * Created by tianwei on 2017/6/29.
@@ -16,8 +16,8 @@ public class FreeMakerUtil {
     /**
      * 获取模板文件
      *
-     * @param name
-     * @return
+     * @param name:名称
+     * @return Template:返回值
      */
     public Template getTemplate(String name) {
         try {
