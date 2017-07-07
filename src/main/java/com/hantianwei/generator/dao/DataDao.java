@@ -50,7 +50,7 @@ public class DataDao {
      *
      * @param tableSchema
      * @param tableName
-     * @return
+     * @return List<Field>
      */
     public List<Field> getAllColums(String tableSchema, String tableName) {
 
@@ -93,7 +93,7 @@ public class DataDao {
      * 根据库名聂所有表
      *
      * @param tableSchema
-     * @return
+     * @return List<Table>
      */
     public List<Table> getAllTables(String tableSchema) {
         List<Table> fieldList = new ArrayList<Table>();
